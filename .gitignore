@@ -1,0 +1,7 @@
+verse.c
+verse.txt
+Songs/**
+.vscode/**
+makefile
+*.o
+*.exe
