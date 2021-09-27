@@ -5,3 +5,4 @@ Songs/**
 makefile
 *.o
 *.exe
+*.stackdump
