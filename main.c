@@ -13,11 +13,9 @@ int main()
 {
 
   char string_ptr[BUFFER_LENGTH] = "";
-  char single = 'a';
   Ask_For_String("What part?", string_ptr);
 
   printf("String generated: %s\n", string_ptr);
-  printf("Character %d\n", single);
 
   unsigned int int_ans;
   int_ans = Ask_For_Int("Give me a number");
