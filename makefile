@@ -40,7 +40,18 @@ intro.o: intro.c
 verse.o: verse.c
 	gcc $(DEBUG_FLAG) $(CFLAGS) $(OPTIMIZATION) verse.c
 
+new_branch:
+	git branch $(br)
+	git checkout $(br)
+	git add .
+	git branch
 
+f_delete_branch:
+	git checkout main
+	git branch
+	git branch -D $(br)
+	git branch
+	
 
 clean:
 	$(RM) *.exe *.o *.stackdump
