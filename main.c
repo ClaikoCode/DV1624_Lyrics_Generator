@@ -100,9 +100,16 @@ void Add_Song_Part(char** song_parts)
     Expand_Song_Array(song_parts);
   }
 
-  song_parts[g_part_count++] = song_part_ptr;
-
-  printf("\nSong part added succesfully!\n");
+  if(song_part_ptr == NULL)
+  {
+    printf("\nAn error has occured! Song part was not added.\n");
+  }
+  else
+  {
+    song_parts[g_part_count++] = song_part_ptr;
+    printf("\nSong part added succesfully!\n");
+  }
+  
 }
 
 int main()
