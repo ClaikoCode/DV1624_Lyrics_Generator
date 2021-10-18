@@ -1,14 +1,14 @@
 # DV1624_Lyrics_Generator
 
 
-A program that constructs lyrics from pre-made parts of the song stored in individual text files.
+A program that constructs lyrics from pre-made parts of public songs by chosing their own combination.
 
 Dictionary Template:
   * Root has name "Songs"
-  * Song folders have song name "Song_Name"
-  * Parts are name "[part]_[id]"
+  * Song folders have name "Song_Name"
+  * Parts have name "[part]_[id]"
 
-Naming for part functions should be of from "create_[part]()"
+Naming for part functions should be "create_[part]\()"
 Files should be named "[part].c"
 
 Kastor:
