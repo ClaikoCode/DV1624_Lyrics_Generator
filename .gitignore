@@ -4,7 +4,6 @@
 verse.c
 chorus.c
 verse.txt
-Songs/**
 .vscode/**
 makefile
 
