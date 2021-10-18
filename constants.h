@@ -1,4 +1,4 @@
 #ifndef INCLUDE_CONSTANTS
 #define INCLUDE_CONSTANTS
-#define BUFFER_LENGTH 64
+#define BUFFER_LENGTH 2048
 #endif

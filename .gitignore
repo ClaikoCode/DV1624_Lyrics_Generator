@@ -1,6 +1,14 @@
+# Many of these ignores might be better placed in .git/info/exclude
+
+# Specific files that should only stay localy
+verse.c
+chorus.c
+verse.txt
 Songs/**
 .vscode/**
 makefile
+
+# Locally created files from building or running
 *.o
 *.exe
 *.stackdump
