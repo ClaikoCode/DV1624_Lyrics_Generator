@@ -1,0 +1,6 @@
+Songs/**
+.vscode/**
+makefile
+*.o
+*.exe
+*.stackdump
