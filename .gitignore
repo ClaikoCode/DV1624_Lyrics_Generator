@@ -5,7 +5,6 @@ verse.c
 chorus.c
 verse.txt
 .vscode/**
-makefile
 
 # Locally created files from building or running
 *.o

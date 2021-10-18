@@ -7,14 +7,14 @@
 
 #include <ftw.h>
 
-struct options
+static struct options
 {
     char** paths;
     int size;
     int capacity;
 }options;
 
-int on_open(const char* fpath, const struct stat* sb, int typeflag)
+static int on_open(const char* fpath, const struct stat* sb, int typeflag)
 {
     if (typeflag == FTW_F)
     {
@@ -47,12 +47,12 @@ int on_open(const char* fpath, const struct stat* sb, int typeflag)
     return 0;
 }
 
-void get_song_options()
+static void get_song_options()
 {
     ftw("Songs", &on_open, FOPEN_MAX);
 }
 
-void free_options()
+static void free_options()
 {
     for (int i = 0; i < options.size; i++)
     {

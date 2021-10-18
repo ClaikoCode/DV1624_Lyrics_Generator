@@ -6,14 +6,14 @@
 #include "constants.h"
 
 #include <ftw.h>
-struct Options
+static struct Options
 {
     char** array;
     int size;
     int capacity;
 }options;
 
-int OnOpen(const char *fpath, const struct stat *sb, int typeflag)
+static int OnOpen(const char *fpath, const struct stat *sb, int typeflag)
 {
     if (typeflag == FTW_F)
     {
@@ -44,12 +44,12 @@ int OnOpen(const char *fpath, const struct stat *sb, int typeflag)
     return 0;
 }
 
-void get_song_options()
+static void get_song_options()
 {
     ftw("Songs", &OnOpen, FOPEN_MAX);
 }
 
-void free_options()
+static void free_options()
 {
     for (int i = 0; i < options.size; i++)
     {
@@ -114,13 +114,4 @@ char * create_verse()
     fclose(file_ptr);
 
     return song_text;
-}
-
-int main()
-{
-    char * temp = create_verse();
-
-    printf("%s\n", temp);
-    free(temp);
-    return 0;
 }
