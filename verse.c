@@ -80,7 +80,7 @@ char * create_verse()
     do
     {
         choice = Ask_For_Int("Enter choice number");
-    } while (choice <= 0 && choice > options.size);
+    } while (choice <= 0 || choice > options.size);
 
     FILE *file_ptr = fopen(options.array[choice - 1], "r");
 

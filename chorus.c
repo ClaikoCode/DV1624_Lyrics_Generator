@@ -104,6 +104,8 @@ char * create_chorus()
         repeats = Ask_For_Int("Number of repeats");
     } while (choice <= 0);
 
+    int j = 0;
+
     for (int i = 0; i < repeats; i++)
     {
         if (i != 0)
@@ -111,7 +113,7 @@ char * create_chorus()
             file_ptr = fopen(options.array[choice - 1], "r");
             next = getc(file_ptr);
         }
-        int j = 0;
+        
         do
         {
             *song_writer = next;
