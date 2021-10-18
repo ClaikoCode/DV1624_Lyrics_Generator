@@ -46,10 +46,10 @@ new_branch:
 	git add .
 	git branch
 
-delete_branch:
+f_delete_branch:
 	git checkout main
 	git branch
-	git branch -d $(br)
+	git branch -D $(br)
 	git branch
 	
 
